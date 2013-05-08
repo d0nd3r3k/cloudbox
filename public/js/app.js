@@ -1,7 +1,7 @@
 //Cloudbox Js file
 
 $(document).ready(function(){
-	var online = false;
+	var online = true;
 	var socket_url = 'http://localhost:8080';
 
 	if(online){
