@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var socket_url = 'http://localhost:8080';
 
 	if(online){
-		socket_url = 'http://89.17.121.194:8080/';
+		socket_url = 'http://50.116.27.203:8080';
 	}
 
 	var socket = io.connect(socket_url);
