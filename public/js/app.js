@@ -1,4 +1,4 @@
-//Cloudbox Js file
+//; Js file
 
 $(document).ready(function(){
 	var online = true;
@@ -14,7 +14,13 @@ $(document).ready(function(){
 
 	socket.emit('boxIsOnline', {'serial':serial});
 
-	/*socket.on('authenticate', function (data){
-		alert("Synced to Cloud");
-	});*/
+	socket.on('syncOnBox', function (data){
+		//alert("Images Synced");
+		
+		var html = "";
+		$(data[1]).each(function(i, media){
+			html +=	"<li><img src='"+media.medium+"' /></li>";
+		})
+		$('ul.images').html(html);
+	});
 });
